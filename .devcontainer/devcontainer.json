@@ -1,0 +1,36 @@
+{
+  "name": "GitByBit Launcher",
+  "customizations": {
+    "vscode": {
+      "extensions": ["GitByBit.gitbybit"],
+      "settings": {
+        // Prevent restoring previously open views (like AI Chat)
+        "window.restoreWindows": "none",
+
+        // Start with no editor or special views
+        "workbench.startupEditor": "none",
+
+        // Disable automatic startup of GitHub Copilot Chat
+        "github.copilot.enable": {
+            "*": false
+        },
+        "chat.commandCenter.enabled": false,
+        "github.copilot.chat.startup": "manual",
+
+        // New terminals open fish by default
+        "terminal.integrated.profiles.linux": {
+          "fish": { "path": "/usr/bin/fish" }
+        },
+
+        "terminal.integrated.defaultProfile.linux": "fish",
+
+        "terminal.integrated.persistentSessionReviveProcess": "never",
+        "terminal.integrated.enablePersistentSessions": false,
+        "terminal.integrated.hideOnStartup": "always",
+      }
+    }
+  },
+
+  // Install Starship into ~/.local/bin (no sudo), then enable it in fish.
+  "postCreateCommand": "bash -lc 'set -e; mkdir -p ~/.local/bin ~/.config/fish; curl -fsSL https://starship.rs/install.sh | sh -s -- -y -b ~/.local/bin; grep -q \"starship init fish\" ~/.config/fish/config.fish 2>/dev/null || { echo \"fish_add_path -g ~/.local/bin\" >> ~/.config/fish/config.fish; echo \"starship init fish | source\" >> ~/.config/fish/config.fish; }'"
+}
