@@ -1,0 +1,17 @@
+{
+  "name": "GitByBit Launcher",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "customizations": {
+    "vscode": {
+      "extensions": ["GitByBit.gitbybit"],
+      "settings": {
+        "workbench.startupEditor": "none",
+        "files.exclude": {
+          "**/.devcontainer": true,
+          "**/.git": true,
+          "**/.github": true
+        }
+      }
+    }
+  }
+}
