@@ -14,6 +14,8 @@
 
 ## How to Use
 
-1. Click the "START" button above to launch a new GitHub Codespace with GitByBit pre-installed and ready to use.
+1. Click the **START** button above to launch a new GitHub Codespace with GitByBit pre-installed and ready to use.
 
-2. Once you see VS Code UI, wait until you see the GitByBit panel appears on the left sidebar. Have patience, it takes some time to initialize everything.
+2. Once you see VS Code UI, wait **patiently**. It'll take up to a minute to initialize everything (the editor must download and install GitByBit, then install Fish as the terminal shell).
+
+3. When the GitByBit panel appears on the left sidebar — you're good to go!
